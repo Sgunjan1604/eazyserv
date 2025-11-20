@@ -1,17 +1,42 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-const bookingSchema = new mongoose.Schema(
+const BookingSchema = new Schema(
   {
-    // Date when the service will be provided
-    serviceDate: {
+    customerId:{
+      type: Schema.Types.ObjectId,
+      ref:"user",
+      required: true
+    },
+
+    workerId:{
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: true
+    },
+    service:{
+      type: String,
+      required: true
+    },
+
+    date: {
       type: Date,
       required: true,
     },
 
-    
     time: {
       type: String,
       required: true,
+    },
+
+    address: {
+      type: String,
+      required: true,
+    },
+    
+    status: {
+      type: String,
+      enum: ["Pending", "Completed", "Cancelled"],
+      default: "Pending",
     },
 
     paymentMode: {
@@ -19,21 +44,7 @@ const bookingSchema = new mongoose.Schema(
       enum: ["Cash", "UPI", "Card", "Online", "Wallet"],
       required: true,
     },
-
-   
-    bookingId: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-
-
-    address: {
-      type: String,
-      required: true,
-    },
-
-   
+    
     totalAmount: {
       type: Number,
       required: true,
@@ -48,20 +59,10 @@ const bookingSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-
-    status: {
-      type: String,
-      enum: ["Pending", "Completed", "Cancelled"],
-      default: "Pending",
-    },
-
-  
   },
   {
     timestamps: true, 
   }
 );
 
-const Booking = mongoose.model("Booking", bookingSchema);
-
-export default Booking;
+module.exports = mongoose.model("booking", BookingSchema);
