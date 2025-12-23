@@ -18,7 +18,7 @@ const Navbar = () => {
                     <li><Link to="/services" className={`navlink ${location.pathname === '/services'?"active":""}`}>Services</Link></li>
                     <li><Link to="/contact" className={`navlink ${location.pathname === '/contact'?"active":""}`}>Contact</Link></li>
                 </ul>
-                <button className='primaryBtn'>Login</button>
+                <Link to={'/login'} className='primaryBtn'>Login</Link>
             </div>
         </nav>
     )

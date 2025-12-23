@@ -10,7 +10,7 @@ mongoose.connect("mongodb://localhost:27017/eazyserv")
 
 require("dotenv").config();
 
-// app.use(cors())
+app.use(cors())
 app.use(express.json())
 
 app.get('/', (req, res) => {

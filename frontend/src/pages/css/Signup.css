@@ -1,0 +1,82 @@
+.signupContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.signupCard {
+  background: #ffffff;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.signupCard h2 {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.signupCard p {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.signupCard h4 {
+  margin: 1.2rem 0 0.5rem;
+  color: #374151;
+}
+
+.signupCard input,
+.signupCard select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.signupCard input:focus,
+.signupCard select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.signupCard button {
+  width: 100%;
+  padding: 13px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.signupCard button:hover {
+  background: #1d4ed8;
+}
+
+.loginLink {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.loginLink a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+

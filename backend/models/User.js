@@ -29,22 +29,12 @@ const UserSchema = new Schema({
   address: {
     landmark: String,
     street: String,
-    city: {
-      type: String,
-      required: true,
-    },
-    state: {
-      type: String,
-      required: true,
-    },
-    pincode: {
-      type: Number,
-      required: true,
-    },
+    city: String,
+    state: String,
+    pincode: String
   },
   profilePhoto: {
     type: String,
-    required: true,
   },
   role: {
     type: String,
@@ -54,7 +44,6 @@ const UserSchema = new Schema({
   workerInfo: {
     skills: {
       type: [String],
-      required: true,
     },
     experience: {
       type: Number,

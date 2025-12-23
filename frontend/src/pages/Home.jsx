@@ -32,8 +32,8 @@ const Home = () => {
             <p>Verified Experts. Transparent Pricing. Quick Booking.</p>
           </div>
           <div className="heroBtns">
-            <button className="primaryBtn">Book a Service</button>
-            <button className="secondaryBtn">Become a Provider</button>
+            <Link to={'/login'} className="primaryBtn">Book a Service</Link>
+            <Link to={'/signup'} className="secondaryBtn">Become a Provider</Link>
           </div>
           <div className="heroSearchBar">
             <input type="search" placeholder='What Service do you need?' />
