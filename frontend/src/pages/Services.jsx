@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import './css/Services.css'
 const Services = () => {
       const services = [
@@ -39,7 +37,6 @@ const Services = () => {
   ]
   return (
     <div className='servicesPage'>
-      <Navbar/>
       <section className="serviceGrid categoriesGrid">
           {services.map((service, index) => (
             <div key={index} className="categoryBox">
@@ -53,7 +50,6 @@ const Services = () => {
           ))
           }
       </section>
-      <Footer/>
     </div>
   )
 }

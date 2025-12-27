@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./css/Signup.css"; // same theme as signup
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { fetchUser } from "../redux/slices/authSlice";
 const Login = () => {
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -40,22 +41,13 @@ const Login = () => {
         throw new Error(data.error || "Login failed");
       }
 
-      // 🔐 Save token & user
       localStorage.setItem("token", data.authtoken);
-      localStorage.setItem("user", JSON.stringify(data.user));
 
-      // 🧭 Role + profile completion logic
-      if (!data.user.isProfileComplete && data.user.role !== "admin") {
-        navigate("/");
-      } else {
-        if (data.user.role === "worker") {
-          navigate("/worker/dashboard");
-        } else if (data.user.role === "customer") {
-          navigate("/services");
-        } else {
-          navigate("/admin/dashboard");
-        }
-      }
+      const user = dispatch(fetchUser())
+
+      if (user.role === "worker") navigate("/worker/dashboard");
+      else if (user.role === "customer") navigate("/customer/dashboard");
+      else navigate("/");
     } catch (err) {
       setError(err.message);
     } finally {

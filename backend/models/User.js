@@ -41,6 +41,10 @@ const UserSchema = new Schema({
     enum: ["worker", "customer", "admin"],
     required: true,
   },
+  isProfileCompleted:{
+    type: Boolean,
+    default: false
+  },
   workerInfo: {
     skills: {
       type: [String],

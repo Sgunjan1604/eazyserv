@@ -39,7 +39,7 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
         try {
-            const { name, email, password, phone, gender, dob, address, profilePhoto, role, customerInfo, workerInfo } = req.body;
+            const { name, email, password, phone, gender, dob, role } = req.body;
             let user = await User.findOne({ email });
             if (user) {
                 return res
@@ -56,25 +56,18 @@ router.post(
                 gender,
                 role,
                 dob,
-
             });
             data = {
                 user: {
-                    id: user.id,
+                    id: user._id,
                 },
             };
 
             const authtoken = jwt.sign(data, JWT_SECRET);
             res.json({
-    authtoken,
-    success: true,
-    user: {
-        id: user._id,
-        role: user.role,
-        isProfileComplete: false,
-        name: user.name,
-    }
-});
+                authtoken,
+                success: true,
+            });
 
         } catch (error) {
             console.error("Error:", error);
@@ -108,21 +101,15 @@ router.post('/login',
 
             const data = {
                 user: {
-                    id: user.id
+                    id: user._id
                 }
             };
             const authtoken = jwt.sign(data, JWT_SECRET);
 
             res.json({
-    authtoken,
-    success: true,
-    user: {
-        id: user._id,
-        role: user.role,
-        isProfileComplete: user.isProfileComplete,
-        name: user.name,
-    }
-});
+                authtoken,
+                success: true,
+            });
 
         } catch (error) {
             console.error(error.message);

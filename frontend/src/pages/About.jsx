@@ -1,11 +1,8 @@
 import React from 'react'
 import './css/About.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 const About = () => {
     return (
         <div className="aboutPage">
-            <Navbar />
             <section className="whoWeAre">
                 <div className="left">
                     <h2>Who We Are</h2>
@@ -50,7 +47,6 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <Footer/>
         </div>
     )
 }

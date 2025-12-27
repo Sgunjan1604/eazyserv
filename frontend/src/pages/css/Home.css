@@ -5,13 +5,11 @@
 .homeHero{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: calc(100vh - 72px);
 }
 .leftHero{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 64px;
+    padding: 64px;
     gap: 20px;
 }
 .heroHead{
@@ -43,7 +41,16 @@
     border: 1px solid #666;
     outline: none;
 }
-
+.customerHome .rightHero{
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customerHome .rightHero img{
+    width: 316px;
+    border-radius: 24px;
+}
 /* Categories Section */
 
 .serviceSection{

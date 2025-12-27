@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -9,7 +7,6 @@ import './css/Contact.css'
 const Contact = () => {
     return (
         <div className='contactPage'>
-            <Navbar />
             <section className="contactBox">
                 <h1>Contact Us</h1>
                 <div className="contactRow">
@@ -34,7 +31,6 @@ const Contact = () => {
                     </form>
                 </div>
             </section>
-            <Footer />
         </div>
     )
 }
