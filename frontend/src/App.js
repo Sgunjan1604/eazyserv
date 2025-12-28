@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import { fetchUser } from './redux/slices/authSlice';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import { fetchServices } from './redux/slices/serviceSlice';
 
 function App() {
     const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
     if (localStorage.getItem("token")) {
       dispatch(fetchUser());
     }
+    dispatch(fetchServices());
   }, [dispatch]);
   return (
     <BrowserRouter>

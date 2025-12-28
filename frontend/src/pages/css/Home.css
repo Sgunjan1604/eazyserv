@@ -41,16 +41,7 @@
     border: 1px solid #666;
     outline: none;
 }
-.customerHome .rightHero{
-    padding: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.customerHome .rightHero img{
-    width: 316px;
-    border-radius: 24px;
-}
+
 /* Categories Section */
 
 .serviceSection{

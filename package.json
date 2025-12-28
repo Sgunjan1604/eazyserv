@@ -1,0 +1,25 @@
+{
+  "name": "eazyserv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend":"cd frontend && npm start",
+    "backend":"cd backend && nodemon index.js",
+    "start":"concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivansh541/eazyserv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shivansh541/eazyserv/issues"
+  },
+  "homepage": "https://github.com/Shivansh541/eazyserv#readme",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

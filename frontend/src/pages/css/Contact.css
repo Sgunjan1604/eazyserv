@@ -47,6 +47,9 @@
 .contactSocial{
     padding: 24px;
 }
+.contactSocial.footerSocial{
+    padding: 16px 24px;
+}
 .contactSocial a{
     color: black;
 }

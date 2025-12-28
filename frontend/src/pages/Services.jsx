@@ -1,54 +1,42 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import './css/Services.css'
+import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchServices } from '../redux/slices/serviceSlice'
 const Services = () => {
-      const services = [
-    {
-      "name": "Electrician",
-      "desc": "Safe electrical repair, wiring, and installation."
-    },
-    {
-      "name": "Plumber",
-      "desc": "Fix leaks, install pipes, and maintain your water systems."
-    },
-    {
-      "name": "Cleaning",
-      "desc": "Deep home, kitchen, and bathroom cleaning."
-    },
-    {
-      "name": "AC & Appliance Repair",
-      "desc": "AC, refrigerator, and appliance servicing."
-    },
-    {
-        "name": "Carpenter",
-        "desc": "Furniture repairs and custom woodwork."
-    },
-    {
-        "name": "Painter",
-        "desc": "Professional wall painting and polishing."
-    },
-    {
-        "name": "Interior Designer",
-        "desc": "Design your dream home with our creative experts."
-    },
-    {
-        "name": "Flooring and Tiles Work",
-        "desc":"Tile installation and floor polishing services."
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
+  const { list: services, loading, error, fetched } = useSelector(state => state.services)
+
+  useEffect(() => {
+    if (!fetched) {
+      dispatch(fetchServices())
     }
-  ]
+  }, [dispatch, fetched])
+
+  if (loading) {
+    return <p className="loadingText">Loading services...</p>
+  }
+
+  if (error) {
+    return <p className="errorText">{error}</p>
+  }
   return (
     <div className='servicesPage'>
       <section className="serviceGrid categoriesGrid">
-          {services.map((service, index) => (
-            <div key={index} className="categoryBox">
-              <img src={`/static/images/services/${service.name}.jpg`} alt="" />
-              <div className="aboutCategory">
-                <h3>{service.name}</h3>
-                <p>{service.desc}</p>
-              </div>
-              <button className="primaryBtn">View Details</button>
+        {services?.map((service) => (
+          <div key={service._id} className="categoryBox">
+            <img src={`/static/images/services/${service.name}.jpg`} alt="" />
+            <div className="aboutCategory">
+              <h3>{service.name}</h3>
+              <p>{service.description}</p>
             </div>
-          ))
-          }
+            <Link to={
+              `${!user ? '/login' : `/services/${service.name.toLowerCase()}`}`
+            } className="primaryBtn">View Details</Link>
+          </div>
+        ))
+        }
       </section>
     </div>
   )
