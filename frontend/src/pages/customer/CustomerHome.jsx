@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './css/CustomerHome.css'
+import SearchBar from '../../components/SearchBar'
 const CustomerHome = () => {
           const categories = [
     {
@@ -34,9 +35,7 @@ const CustomerHome = () => {
                         <Link to={'/services'} className="primaryBtn">Book a Service</Link>
                         <Link to={'/mybookings'} className="secondaryBtn">View My Bookings</Link>
                     </div>
-                    <div className="heroSearchBar">
-                        <input type="search" placeholder='What Service do you need?' />
-                    </div>
+                    <SearchBar class = {"heroSearchBar"}/>
                 </div>
                 <div className="rightHero">
                     <img src="/static/images/istockphoto-1363376686-612x612.jpg" alt="" />

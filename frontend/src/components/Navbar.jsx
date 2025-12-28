@@ -4,41 +4,41 @@ import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import SearchBar from './SearchBar'
+const navbarLinks = {
+    public: [
+        { path: '/', label: 'Home' },
+        { path: '/about', label: 'About' },
+        { path: '/services', label: 'Services' },
+        { path: '/contact', label: 'Contact' }
+    ],
+
+    customer: [
+        { path: '/', label: 'Home' },
+        { path: '/services', label: 'Services' },
+        { path: '/mybookings', label: 'My Bookings' },
+        { path: '/notifications', label: 'Notifications' }
+    ],
+
+    worker: [
+        { path: '/', label: 'Home' },
+        { path: '/services', label: 'Services' },
+        { path: '/myjobs', label: 'My Jobs' },
+        { path: '/notifications', label: 'Notifications' }
+    ]
+}
 const Navbar = () => {
-    const navbarLinks = {
-        public: [
-            { path: '/', label: 'Home' },
-            { path: '/about', label: 'About' },
-            { path: '/services', label: 'Services' },
-            { path: '/contact', label: 'Contact' }
-        ],
-
-        customer: [
-            { path: '/', label: 'Home' },
-            { path: '/services', label: 'Services' },
-            { path: '/mybookings', label: 'My Bookings' },
-            { path: '/notifications', label: 'Notifications' }
-        ],
-
-        worker: [
-            { path: '/', label: 'Home' },
-            { path: '/services', label: 'Services' },
-            { path: '/myjobs', label: 'My Jobs' },
-            { path: '/notifications', label: 'Notifications' }
-        ]
-    }
     const location = useLocation()
-    const user = useSelector((state) => state.auth.user)
 
+    const user = useSelector((state) => state.auth.user)
     const role = user?.role || "public"
     const links = navbarLinks[role]
+
     return (
         <nav className='navbar'>
             <div className="leftNav">
                 <h3>EazyServ</h3>
-                <div className="searchBar">
-                    <input type="search" name='search' placeholder='What service do you need?' />
-                </div>
+                <SearchBar class = {"searchBar"}/>
             </div>
             <div className="rightNav">
                 <ul className='navlinks'>

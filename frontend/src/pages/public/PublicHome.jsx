@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SearchBar from '../../components/SearchBar'
 
 const PublicHome = () => {
       const categories = [
@@ -32,9 +33,7 @@ const PublicHome = () => {
                         <Link to={'/login'} className="primaryBtn">Book a Service</Link>
                         <Link to={'/signup'} className="secondaryBtn">Become a Provider</Link>
                     </div>
-                    <div className="heroSearchBar">
-                        <input type="search" placeholder='What Service do you need?' />
-                    </div>
+                    <SearchBar class = {"heroSearchBar"}/>
                 </div>
                 <div className="rightHero">
                     <img src="/static/images/hero-right.svg" alt="" />
@@ -50,7 +49,7 @@ const PublicHome = () => {
                                 <h3>{category.name}</h3>
                                 <p>{category.desc}</p>
                             </div>
-                            <button className="primaryBtn">Book Now</button>
+                            <Link to={'/login'} className="primaryBtn">Book Now</Link>
                         </div>
                     ))
                     }
