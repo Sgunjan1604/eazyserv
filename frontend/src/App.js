@@ -15,6 +15,7 @@ import { fetchUser } from './redux/slices/authSlice';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { fetchServices } from './redux/slices/serviceSlice';
+import Workers from './pages/customer/Workers';
 
 function App() {
     const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/services/:slug' element={<Workers/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

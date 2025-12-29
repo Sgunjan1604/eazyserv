@@ -32,7 +32,7 @@ const Services = () => {
               <p>{service.description}</p>
             </div>
             <Link to={
-              `${!user ? '/login' : `/services/${service.name.toLowerCase()}`}`
+              `${!user ? '/login' : `/services/${service.slug}`}`
             } className="primaryBtn">View Details</Link>
           </div>
         ))

@@ -7,18 +7,22 @@ const CustomerHome = () => {
           const categories = [
     {
       "name": "Electrician",
+      "slug": "electrician",
       "desc": "Certified electricians for wiring, fittings, and quick electrical repairs at home."
     },
     {
       "name": "Plumber",
+      "slug": "plumber",
       "desc": "Expert plumbers for leak repairs, pipe fitting, and bathroom installations."
     },
     {
       "name": "Cleaning",
+      "slug": "cleaning",
       "desc": "Professional home, kitchen, and deep cleaning services for a spotless living space."
     },
     {
       "name": "AC & Appliance Repair",
+      "slug": "ac-and-appliance-repair",
       "desc": "Reliable technicians to fix ACs, refrigerators, washing machines, and more."
     },
   ]
@@ -99,7 +103,7 @@ const CustomerHome = () => {
                                 <h3>{category.name}</h3>
                                 <p>{category.desc}</p>
                             </div>
-                            <button className="primaryBtn">Book Now</button>
+                            <Link to={`/services/${category.slug}`} className="primaryBtn">Book Now</Link>
                         </div>
                     ))
                     }

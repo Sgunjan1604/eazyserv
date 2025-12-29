@@ -20,7 +20,7 @@ const SearchBar = (props) => {
         if (!user) {
             navigate('/login')
         } else {
-            navigate(`/services/${serviceName.toLowerCase()}`)
+            navigate(`/services/${serviceName}`)
         }
     }
     return (
@@ -43,7 +43,7 @@ const SearchBar = (props) => {
                             <div
                                 key={service._id}
                                 className="searchItem"
-                                onClick={() => handleSelect(service.name)}
+                                onClick={() => handleSelect(service.slug)}
                             >
                                 {service.name}
                             </div>

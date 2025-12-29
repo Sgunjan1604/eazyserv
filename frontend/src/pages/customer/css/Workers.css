@@ -1,0 +1,62 @@
+.workers{
+    background-color: #f9fafb;
+}
+.filterBox{
+    display: flex;
+    padding: 8px 40px;
+    gap: 24px;
+}
+.workersList{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+.workerDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+.workerDetails .leftDetails{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.workerDetails .leftDetails img{
+    width: 100px;
+}
+.workerDetails .workerInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.workerDetails .workerName{
+    font-size: 18px;
+    font-weight: bold;
+    color: #111827;
+}
+.workerDetails .workerInfo p{
+    font-size: 14px;
+    color: #6b7280;
+}
+.workerDetails .rightDetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.workerDetails .rightDetails div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.workerDetails .rating{
+    font-size: 14px;
+    color: #111827;
+}
+.workerDetails .rating span{
+    color: #6b7280;
+}
+.workerDetails .price{
+    font-size: 16px;
+    font-weight: 600;
+    color: #16a34a;
+}
