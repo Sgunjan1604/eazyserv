@@ -1,7 +1,7 @@
 import {
-BrowserRouter,
-Route,
-Routes
+  BrowserRouter,
+  Route,
+  Routes
 } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About';
@@ -16,9 +16,10 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { fetchServices } from './redux/slices/serviceSlice';
 import Workers from './pages/customer/Workers';
+import WorkerDetails from './pages/customer/WorkerDetails';
 
 function App() {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
@@ -30,15 +31,16 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
         <Route path="/" element={<Home />} />
-        <Route path='/about' element={<About/>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/services/:slug' element={<Workers/>}/>
+        <Route path='/about' element={<About />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/services/:slug' element={<Workers />} />
+        <Route path='/worker/:id' element= {<WorkerDetails/>}/>
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }
