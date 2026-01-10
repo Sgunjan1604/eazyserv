@@ -16,6 +16,9 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { fetchServices } from './redux/slices/serviceSlice';
 import Workers from './pages/customer/Workers';
+import WorkerHome from "./pages/worker/WorkerHome";
+import WorkerAllBookings from "./pages/worker/WorkerAllBookings";
+
 
 function App() {
     const dispatch = useDispatch();
@@ -37,6 +40,9 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/services/:slug' element={<Workers/>}/>
+        <Route path="/worker/home" element={<WorkerHome />} />
+        <Route path="/worker/bookings" element={<WorkerAllBookings />} />
+
       </Routes>
       <Footer/>
     </BrowserRouter>
