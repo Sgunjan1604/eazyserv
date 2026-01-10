@@ -92,18 +92,24 @@ const WorkerDetails = () => {
       <section className="verificationAndPricing">
         <div className="verificationStatus">
           <h2>Verification Status</h2>
-            <div className="verifiedList list">
-              <p>✅ Adhaar Verified</p>
-              <p>✅ Phone Verified</p>
-              <p>✅ Background Checked</p>
-            </div>
+          <div className="verifiedList list">
+            <p>✅ Adhaar Verified</p>
+            <p>✅ Phone Verified</p>
+            <p>✅ Background Checked</p>
+          </div>
         </div>
         <div className="pricing">
           <h2>Pricing</h2>
-            <div className="pricingList list">
-              <p>Starting Price: <span>₹299</span></p>
-              <p>Price per hour: <span>₹100</span></p>
+          <div className="list pricingList">
+            <p>
+              Visit Charge: <span>₹99</span>
+            </p>
+            <div className="pricingNote">
+              <p>✔ Pay only the visit charge at booking.</p>
+              <p>✔ Final service price will be decided after inspection.</p>
+              <p>✔ Visit charge will be adjusted in the final bill.</p>
             </div>
+          </div>
         </div>
       </section>
       {/* ================= REVIEWS ================= */}

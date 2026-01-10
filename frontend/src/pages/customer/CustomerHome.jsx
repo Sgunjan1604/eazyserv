@@ -134,6 +134,40 @@ const CustomerHome = () => {
                 </div>
                 <Link to={'/services'}>Explore All Services &rarr;</Link>
             </section>
+            
+                        <section className="howItWorks">
+                <div className="hiwHead">
+                    <h1>How It Works</h1>
+                    <p>Getting things done in just 4 simple steps</p>
+                </div>
+                <div className="steps">
+                    {[
+                        {
+                            "name": "Search",
+                            "desc": "Find the service you need."
+                        },
+                        {
+                            "name": "Book",
+                            "desc": "Select date, time and confirm Booking."
+                        },
+                        {
+                            "name": "Worker Arrives",
+                            "desc": "Professional comes to your doorstep."
+                        },
+                        {
+                            "name": "Pay",
+                            "desc": "Hassle-free payment after service."
+                        }
+                    ].map((step, index) => (
+                        <div key={index} className="step">
+                            <h1>{index + 1}</h1>
+                            <h3>{step.name}</h3>
+                            <p>{step.desc}</p>
+                        </div>
+                    ))
+                    }
+                </div>
+            </section>
         </div>
     )
 }

@@ -4,14 +4,34 @@ import { Link } from "react-router-dom";
 
 const bookingsData = [
   {
+    id: "EZ12340",
+    service: "Carpenter",
+    date: "07 Jan 2026",
+    time: "09:00 AM",
+    address: "Rajajipuram, Lucknow",
+    worker: "Not Assigned",
+    price: null,
+    status: "Pending",
+  },
+  {
     id: "EZ12345",
     service: "Electrician",
     date: "05 Jan 2026",
     time: "10:00 AM",
     address: "Alambagh, Lucknow",
     worker: "Rahul Sharma",
-    price: 499,
+    price: 99,
     status: "Upcoming",
+  },
+  {
+    id: "EZ12348",
+    service: "Carpenter",
+    date: "06 Jan 2026",
+    time: "02:00 PM",
+    address: "Hazratganj, Lucknow",
+    worker: "Vikas Singh",
+    price: 499,
+    status: "In Progress",
   },
   {
     id: "EZ12346",
@@ -30,20 +50,28 @@ const bookingsData = [
     time: "11:00 AM",
     address: "Indira Nagar, Lucknow",
     worker: "Suresh Yadav",
-    price: 999,
+    price: 99,
     status: "Cancelled",
   },
 ];
 
-const filters = ["All", "Upcoming", "In Progress", "Completed", "Cancelled"];
+const filters = [
+  "All",
+  "Pending",
+  "Upcoming",
+  "In Progress",
+  "Completed",
+  "Cancelled"
+];
+
 
 export default function MyBookings() {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filteredBookings =
-    activeFilter === "All"
-      ? bookingsData
-      : bookingsData.filter((b) => b.status === activeFilter);
+const filteredBookings =
+  activeFilter === "All"
+    ? bookingsData
+    : bookingsData.filter((b) => b.status === activeFilter);
 
   return (
     <section className="customerBookingsPage">

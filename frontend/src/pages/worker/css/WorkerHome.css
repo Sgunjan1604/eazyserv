@@ -6,7 +6,7 @@
 }
 
 /* ===== HERO SECTION ===== */
-.homeHero {
+.workerHome .homeHero {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,82 +16,54 @@
   margin-bottom: 40px;
 }
 
-.leftHero {
+.workerHome .leftHero {
   max-width: 50%;
 }
 
-.heroHead h3 {
+.workerHome .heroHead h3 {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-.heroHead p {
+.workerHome .heroHead p {
   color: #6b7280;
   margin-bottom: 24px;
 }
 
-.heroBtns {
+.workerHome .heroBtns {
   display: flex;
   gap: 16px;
 }
 
-/* ===== BUTTONS ===== */
-.primaryBtn {
-  background: #2563eb;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.primaryBtn:hover {
-  background: #1e40af;
-}
-
-.secondaryBtn {
-  border: 1px solid #2563eb;
-  color: #2563eb;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 500;
-  text-decoration: none;
-  background: transparent;
-}
-
-.secondaryBtn:hover {
-  background: #eff6ff;
-}
 
 /* ===== HERO IMAGE ===== */
-.rightHero img {
+.workerHome .rightHero img {
   max-width: 320px;
   width: 100%;
 }
 
 /* ===== RECENT JOBS ===== */
-.recentBookings {
+.workerHome .recentBookings {
   background: #ffffff;
   padding: 30px;
   border-radius: 16px;
 }
 
-.recentBookings h2 {
+.workerHome .recentBookings h2 {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 /* ===== JOB ITEM ===== */
-.bookingItems {
+.workerHome .bookingItems {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.bookingItem {
+.workerHome .bookingItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,32 +72,32 @@
   background: #f9fafb;
 }
 
-.bookingInfo {
+.workerHome .bookingInfo {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.bookingInfo .icon {
+.workerHome .bookingInfo .icon {
   font-size: 26px;
 }
 
-.bookingInfo h3 {
+.workerHome .bookingInfo h3 {
   font-size: 16px;
   font-weight: 500;
 }
 
-.bookingInfo p {
+.workerHome .bookingInfo p {
   font-size: 14px;
   color: #6b7280;
 }
 
 /* ===== STATUS ===== */
-.statusBox {
+.workerHome .statusBox {
   text-align: right;
 }
 
-.status {
+.workerHome .status {
   display: inline-block;
   font-size: 13px;
   padding: 6px 12px;
@@ -133,35 +105,35 @@
   margin-bottom: 6px;
 }
 
-.status.completed {
+.workerHome .status.completed {
   background: #dcfce7;
   color: #15803d;
 }
 
-.status.ongoing {
+.workerHome .status.ongoing {
   background: #e0f2fe;
   color: #0369a1;
 }
 
-.status.cancelled {
+.workerHome .status.cancelled {
   background: #fee2e2;
   color: #b91c1c;
 }
 
 /* ===== VIEW LINK ===== */
-.linkBtn {
+.workerHome .linkBtn {
   display: inline-block;
   font-size: 13px;
   color: #2563eb;
   text-decoration: none;
 }
 
-.linkBtn:hover {
+.workerHome .linkBtn:hover {
   text-decoration: underline;
 }
 
 /* ===== VIEW ALL ===== */
-.viewAllLink {
+.workerHome .viewAllLink {
   display: block;
   margin-top: 20px;
   text-align: right;
@@ -170,7 +142,7 @@
   text-decoration: none;
 }
 
-.viewAllLink:hover {
+.workerHome .viewAllLink:hover {
   text-decoration: underline;
 }
 

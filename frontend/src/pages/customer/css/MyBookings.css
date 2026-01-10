@@ -9,10 +9,11 @@
 }
 .customerBookingsPage .filters {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 12px;
   width: 100%;
 }
+
 .filterBtn {
   height: 36px;
   padding: 8px 16px;
@@ -115,6 +116,10 @@
 .statusBadge.cancelled{
     background-color: #FEE2E2;
     color: #991B1B;
+}
+.statusBadge.pending {
+  background: #f3f4f6;
+  color: #374151;
 }
 .actions{
     display: flex;

@@ -159,16 +159,13 @@ const Workers = () => {
                             <div className="workerInfo">
                                 <h5 className='workerName'>{worker.name}</h5>
                                 <p>{formatSlug(slug)} - {worker.experience} years experience</p>
+                                <p className='rating'>⭐ {worker.rating} <span>({worker.reviews} reviews)</span></p>
                                 <p>📍 {worker.location}</p>
                             </div>
                         </div>
                         <div className="rightDetails">
-                            <div>
-                                <p className='rating'>⭐ {worker.rating} <span>({worker.reviews} reviews)</span></p>
-                                <p className='price'>₹{worker.price}/hr</p>
-                            </div>
                             <div className="buttons">
-                                <Link to = {`/worker/${worker.id}`} className='primaryBtn'>View Details</Link>
+                                <Link to={`/worker/${worker.id}`} className='primaryBtn'>View Details</Link>
                                 <Link to={`/book/${worker.id}`} className='secondaryBtn'>Book Now</Link>
                             </div>
                         </div>
