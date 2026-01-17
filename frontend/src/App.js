@@ -23,8 +23,8 @@ import BookService from './pages/customer/BookService';
 import MyBookings from './pages/customer/MyBookings';
 import BookingDetails from './pages/customer/BookingDetails';
 import WorkerAllJob from './pages/worker/WorkerAllJob';
-import WorkerProfile from "./pages/worker/WorkerProfile";
 import Notifications from './components/Notifications';
+import Profile from './pages/Profile';
 
 function App() {
   const dispatch = useDispatch();
@@ -54,7 +54,7 @@ function App() {
         <Route path='/mybookings/:bookingid' element={<BookingDetails />} />
         <Route path="/myjobs" element={<WorkerAllJob />} />
         <Route path='/notifications' element={<Notifications/>}/>
-        <Route path="/profile" element={<WorkerProfile />} />
+        <Route path="/profile" element={<Profile />} />
 
 
       </Routes>
