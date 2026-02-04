@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; // ✅ IMPORTANT
-import "./css/WorkerHome.css"; // reuse same CSS
+import "./css/WorkerAllBookings.css"; // reuse same CSS
 
 const WorkerAllBookings = () => {
   const [bookings, setBookings] = useState([]);

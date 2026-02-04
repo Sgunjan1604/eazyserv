@@ -28,6 +28,9 @@ import ProtectedRoute from './routes/ProtectedRoute';
 import PublicRoute from './routes/PublicRoute';
 import BlockWorkerRoute from './routes/BlockWorkerRoute';
 
+
+
+
 function App() {
   const dispatch = useDispatch();
 
@@ -79,6 +82,8 @@ function App() {
         <Route element={<ProtectedRoute allowedRoles={["worker"]} />}>
           <Route path="/worker/bookings" element={<WorkerAllBookings />} />
           <Route path="/myjobs" element={<WorkerAllJob />} />
+       
+          
         </Route>
       </Routes>
       <Footer />
